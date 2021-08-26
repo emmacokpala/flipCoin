@@ -1,0 +1,21 @@
+//Task 2: about the coin
+class Coin (val faces: Int) {
+    fun flip() : Int {
+        return (1..faces).random()
+    }
+}
+
+fun main() {
+    val firstThrow  = Coin (2)
+    val secondThrow = Coin (2)
+    val coin1 = if (firstThrow.flip() == 1) "Head" else "Tail"
+    val coin2 = if (secondThrow.flip() == 2) "Head" else "Tail"
+    println("Your double coins flipped a $coin1 and $coin2")
+    
+    //A shorter code to achieve Task 2 above without a class.
+fun main() {
+    val coin = (1..2).random()
+    val result1 = if (coin == 1) "Head" else "Tail"
+    val result2 = if (coin == 2) "Head" else "Tail"
+    println("Your double coins flipped a $result1 and $result2")
+}
